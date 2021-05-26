@@ -6,7 +6,11 @@ const { Country, conn } = require('../../src/db.js');
 
 const agent = session(app);
 const country = {
+  id: 'ARG',
   name: 'Argentina',
+  flag: "url",
+  continent: "Americas",
+  capital: "Buenos Aires"
 };
 
 describe('Country routes', () => {
@@ -15,10 +19,21 @@ describe('Country routes', () => {
     console.error('Unable to connect to the database:', err);
   }));
   beforeEach(() => Country.sync({ force: true })
-    .then(() => Country.create(pokemon)));
+    .then(() => Country.create(country)));
   describe('GET /countries', () => {
     it('should get 200', () =>
       agent.get('/countries').expect(200)
+    );
+  });
+
+
+  describe('GET /countries/{idPais}', () => {
+    it('should return an object', () =>
+      agent.get('/countries/:id')
+      .expect(200)
+      .expect(function(res) {
+        expect(res.body).to.deep.equal({});
+      })
     );
   });
 });

@@ -1,0 +1,39 @@
+@import "../../index.module.css";
+
+* {
+    box-sizing: border-box;
+}
+
+.countries {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: center;
+}
+
+.card {
+    flex: 0 1 20%;
+    list-style: none;
+    overflow: hidden;
+    box-shadow: 0px 2px 8px 0px var(--grey);
+    width: 280px;
+    border-radius: 1rem;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.flag {
+    width: 90%;
+    max-height: 90%;
+    padding-top: 1rem;
+}
+
+span {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1rem;
+    padding-bottom: 1rem;
+}
