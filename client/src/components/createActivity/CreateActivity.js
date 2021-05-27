@@ -1,12 +1,14 @@
 import React from 'react'
 import {useState, useEffect} from 'react'
 import {useSelector, useDispatch} from 'react-redux'
+import {useHistory} from 'react-router-dom'
 import {createActivity, getCountries} from '../../actions/index'
 import styles from './CreateActivity.module.css'
 
 
 function CreateActivity() {
     const dispatch = useDispatch()
+    const history = useHistory()
     useEffect(() => dispatch(getCountries()), [dispatch])
 
     const countries = useSelector(state => state.countries) 
@@ -36,6 +38,7 @@ function CreateActivity() {
     const handleSubmit = function(e) {
         e.preventDefault()
         createActivity(input)
+        history.push('/countries')
     }
 
     return ( 
