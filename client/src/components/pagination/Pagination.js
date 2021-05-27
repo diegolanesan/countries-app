@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from './Pagination.module.css'
 
 const Pagination = ({countriesPerPage, totalCountries, nextPage}) => {
   
@@ -7,13 +8,13 @@ const Pagination = ({countriesPerPage, totalCountries, nextPage}) => {
   for(let i = 1; i <= Math.ceil(totalCountries / countriesPerPage); i++) {
     pageNumbers.push(i)
   }
-  
+   
   return (
-    <div>
+    <div className={styles.container}>
       {pageNumbers.map(number => 
-        <li key={number}>
-          <button onClick={() => nextPage(number)}> {number} </button>
-        </li>  
+       
+          <button className={styles.pageNumber} onClick={() => nextPage(number)}> {number} </button>
+       
       )}
     </div>
   )

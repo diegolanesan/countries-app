@@ -9,17 +9,18 @@
     flex-wrap: wrap;
     align-content: space-between;
     justify-content: center;
+    margin-top: 50px;
 }
 
 .card {
-    flex: 0 1 20%;
+    flex: 0 1 25%;
     list-style: none;
     overflow: hidden;
     box-shadow: 0px 2px 8px 0px var(--grey);
     width: 280px;
-    border-radius: 1rem;
+    border-radius: 8px;
     position: relative;
-    margin-bottom: 1rem;
+    margin-bottom: 40px;
 }
 
 .flag {
@@ -28,12 +29,20 @@
     padding-top: 1rem;
 }
 
-span {
+div span {
+    display: block;
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 20px;
+    color: var(--green);
+    margin-top: 15px;
 }
 
-p {
-    font-size: 1rem;
-    padding-bottom: 1rem;
+div a {
+    text-decoration: none;
+}
+
+div p {
+    font-size: 16px;
+    margin-top: 5px;
+    color: var(--primary-color)
 }

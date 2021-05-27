@@ -22,8 +22,8 @@
 }
 
 .start {
-    background-color: var(--primary-color);
-    color: var(--grey);
+    background-color: var(--secondary-color);
+    color: #fff;
     font-weight: 600;
     font-size: 1.5em;
     padding: 0.70em;
@@ -33,6 +33,6 @@
 }
 
 .start:hover {
-    background-color: var(--grey);
-    color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: #fff;
 }

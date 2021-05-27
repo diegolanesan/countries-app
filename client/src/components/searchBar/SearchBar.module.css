@@ -1,2 +1,49 @@
-@import '../../index.module.css'
+@import '../../index.module.css';
 
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.filtersContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    padding: 10px;
+    margin: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background: var(--secondary-color);
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: var(--primary-color);
+}
+
+.searchBox {
+    padding: 7px;
+    border-radius: 10px;
+    border: 1px solid var(--primary-color);
+    width: 250px;
+    max-width: 250px;
+}
+
+.filterLabel {
+    font-weight: 600;
+    padding: 15px;
+}
+
+.filtersContainer select {
+    padding: 7px;
+    border-radius: 10px;
+    border: 1px solid var(--primary-color);
+    cursor: pointer;
+}

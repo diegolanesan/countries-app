@@ -22,7 +22,7 @@ async function getCountryById (req, res, next) {
             }, 
             include:[{
                 model: Activity, 
-                attributes: ['id', 'name'],
+                attributes: ['id', 'name', 'difficulty', 'duration', 'season'], 
             }],     
         })
     

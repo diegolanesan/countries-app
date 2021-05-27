@@ -4,15 +4,12 @@
     box-sizing: border-box;
 }
 
-.countries {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-between;
+.container {
+    display:flex;
     justify-content: center;
 }
 
 .card {
-    flex: 0 1 20%;
     list-style: none;
     overflow: hidden;
     box-shadow: 0px 2px 8px 0px var(--grey);
@@ -20,6 +17,10 @@
     border-radius: 1rem;
     position: relative;
     margin-bottom: 1rem;
+    background: #fff;
+    margin-top: 40px;
+    margin-right: 40px;
+    padding-top: 10px;
 }
 
 .flag {
@@ -28,12 +29,26 @@
     padding-top: 1rem;
 }
 
-span {
-    font-weight: 600;
-    font-size: 1.5rem;
+h2 {
+    margin: 20px 0;
+    text-transform: uppercase;
+    color: var(--green)
 }
 
-p {
-    font-size: 1rem;
-    padding-bottom: 1rem;
+h3 {
+    font-size: 22px;
+    color: var(--green);
+    padding: 0 10px;
+    line-height: 25px;
 }
+
+span {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.card p {
+    font-size: 16px;
+    padding-bottom: 20px; 
+    color: #000;
+} 

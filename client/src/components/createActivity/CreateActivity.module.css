@@ -1,1 +1,49 @@
-@import '../../index.module.css'
+@import '../../index.module.css';
+
+
+.form {
+    width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    background: #fff;
+}
+
+.form .input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  border: 1px solid var(--green);
+}
+
+.form select {
+  min-height: 120px;
+  min-width: 100%;
+  max-width: 100%;
+}
+ 
+.btn {
+  width: 200px;
+  margin: 10px auto;
+  background-color: var(--green);
+  color: #fff;
+  padding: 10px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  background-color: var(--primary-color);
+}
+
+.form label {
+  display: block;
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 10px;
+}

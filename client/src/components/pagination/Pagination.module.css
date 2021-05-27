@@ -1,2 +1,18 @@
-@import '../../index.module.css'
+@import '../../index.module.css';
 
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pageNumber {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 20px;
+    border: none;
+    background: var(--green);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}

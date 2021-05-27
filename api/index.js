@@ -41,6 +41,15 @@ conn.sync({ force: true }).then(() => {
          population: country.population,
      }))
      
+  
+/*       const prueba = await Activity.create({
+      name: "Ski",
+      difficulty: 4,
+      duration: "2 horas",
+      season: "Verano"
+     })
+     prueba.addCountries("ARG") 
+ */
     console.log('%s listening at 3001'); // eslint-disable-line no-console
   });
 });

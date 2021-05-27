@@ -2,7 +2,7 @@ import React from 'react'
 import {useState, useEffect} from 'react'
 import {useSelector, useDispatch} from 'react-redux'
 import {createActivity, getCountries} from '../../actions/index'
-// import styles from './CreateActivity.module.css'
+import styles from './CreateActivity.module.css'
 
 
 function CreateActivity() {
@@ -38,29 +38,29 @@ function CreateActivity() {
         createActivity(input)
     }
 
-    return (
-        <div>
-            <form onSubmit={handleSubmit}>
-                <span> Crea una actividad turística </span>
-                <div>
-                    <label> Nombre </label>
-                    <input type="text" name="name" onChange={handleChange} value={input.name}></input>
+    return ( 
+        <div> 
+            <form className={styles.form} onSubmit={handleSubmit}>
+                
+                <div className="styles.formGroup">
+                    <label className={styles.label}> Nombre </label>
+                    <input className={styles.input} type="text" name="name" onChange={handleChange} value={input.name} placeholder="Nombre"></input>
                 </div>
-                <div>
+                <div className="styles.formGroup"> 
                     <label> Dificulad </label>
-                    <input type="text" name="difficulty" onChange={handleChange} value={input.difficulty}></input>
+                    <input className={styles.input} type="text" name="difficulty" onChange={handleChange} value={input.difficulty} placeholder="1 a 5"></input>
                 </div>
-                <div>
+                <div className="styles.formGroup">
                     <label> Duración </label>
-                    <input type="text" name="duration" onChange={handleChange} value={input.duration}></input>
+                    <input className={styles.input} type="text" name="duration" onChange={handleChange} value={input.duration} placeholder="Duración"></input>
                 </div>
-                <div>
+                <div className="styles.formGroup">
                     <label> Estación </label>
-                    <input type="text" name="season" onChange={handleChange} value={input.season}></input>
+                    <input className={styles.input} type="text" name="season" onChange={handleChange} value={input.season} placeholder="Estación"></input>
                 </div>
-                 <div>
+                 <div className="styles.formGroup">
                     <label> Países </label>
-                    <select id="countries" name="countries" size="5" multiple onChange={handleOptions}> 
+                    <select className={styles.select} id="countries" name="countries" size="5" multiple onChange={handleOptions}> 
                         {countries.map((e) =>{
                         return (<option key={e.id} value={e.id}>{e.name}</option>)
                         }
@@ -68,7 +68,7 @@ function CreateActivity() {
                     </select>
                 </div>
 
-                <input type='submit'/>
+                <input className={styles.btn} type='submit'/>
             </form>
         </div>
     )

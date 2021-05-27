@@ -1,5 +1,5 @@
 import React from 'react'
-// import styles from './SearchBar.module.css'
+import styles from './SearchBar.module.css'
 import {useState} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import {getCountryByName, sortCountries, filterByContinent, filterByActivity} from '../../actions/index'
@@ -25,32 +25,32 @@ function SearchBar(props) {
     }
 
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
-                <input type="text" onChange={handleChange}></input>
-                    <input type="submit"/> 
-            </form>
+        <div className={styles.container}>
+           
             <div>
-            <button onClick ={()=>dispatch(sortCountries(filterCountries, 'asc'))}>A a Z</button>
-            <button onClick ={()=>dispatch(sortCountries(filterCountries, 'desc'))}>Z a A</button>
+            <button className={styles.btn} onClick ={()=>dispatch(sortCountries(filterCountries, 'asc'))}>A a Z</button>
+            <button className={styles.btn} onClick ={()=>dispatch(sortCountries(filterCountries, 'desc'))}>Z a A</button>
             </div>
             <div>
-            <button onClick ={()=>dispatch(sortCountries(filterCountries, 'more_population'))}> Mayor población</button>
-            <button onClick ={()=>dispatch(sortCountries(filterCountries, 'less_population'))}> Menor población</button>
+            <button className={styles.btn} onClick ={()=>dispatch(sortCountries(filterCountries, 'more_population'))}> Mayor población</button>
+            <button className={styles.btn} onClick ={()=>dispatch(sortCountries(filterCountries, 'less_population'))}> Menor población</button>
             </div>
 
-            <div>
-                <span>Continente: </span>
+            <form onSubmit={handleSubmit}>
+                <input className={styles.searchBox} type="text" onChange={handleChange}></input>
+                    <input className={styles.btn} type="submit"/> 
+            </form>
+
+            <div className={styles.filtersContainer}>
+                <label className={styles.filterLabel}>Continente: </label>
                 <select onChange={(e)=> dispatch(filterByContinent(e.target.value, countries))}>
                         <option value = {'all'}>todos</option>
                             {continents.map((continent) =>{
                             return (<option key={continent} value={continent}>{continent}</option>)
                             })}
-                </select>
-            </div>
-
-            <div>
-                <span>Actividad: </span>
+                </select> 
+          
+                <label className={styles.filterLabel}>Actividad: </label>
                 <select onChange={(e)=> dispatch(filterByActivity(e.target.value, countries))}>
                         <option value = {'all'}>todas</option>
                             {activities.map((activity) =>{

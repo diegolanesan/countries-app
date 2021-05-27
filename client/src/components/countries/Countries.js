@@ -27,7 +27,7 @@ const Countries = (props) => {
 
     function nextPage(pageNumber) {
       setcurrentPage(pageNumber)
-    }
+    } 
     return (
         <div>
             <SearchBar />
@@ -38,7 +38,7 @@ const Countries = (props) => {
 
             }
             
-            {currentCountries.map(function(country){
+            {currentCountries.map((country) => {
 
               if(filter !== 'all' ){
 
