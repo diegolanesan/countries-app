@@ -88,7 +88,7 @@ export function sortCountries(countries, sort) {
       dispatch({type: "ORDER_COUNTRIES", data: sortCountries})
     }
     
-  } 
+  }  
 
 export function getActivities() {
     return function(dispatch) {

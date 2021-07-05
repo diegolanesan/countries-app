@@ -11,14 +11,14 @@ const Pagination = ({countriesPerPage, totalCountries, nextPage}) => {
    
   return (
     <div className={styles.container}>
-      {pageNumbers.map(number => 
-       
-          <button className={styles.pageNumber} onClick={() => nextPage(number)}> {number} </button>
-       
-      )}
+      
+      {totalCountries === 1 ? <div></div> : 
+pageNumbers.map(number => <button className={styles.pageNumber} onClick={() => nextPage(number)}> {number} </button>)
+     }
+    
     </div>
-  )
-}
 
+  )
+    }
 export default Pagination
 

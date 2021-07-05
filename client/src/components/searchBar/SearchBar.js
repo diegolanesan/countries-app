@@ -23,7 +23,7 @@ function SearchBar(props) {
         e.preventDefault()
         dispatch(getCountryByName(name))
     }
-
+ 
     return (
         <div className={styles.container}>
            
