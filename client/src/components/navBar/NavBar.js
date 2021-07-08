@@ -5,15 +5,16 @@ import {Link} from 'react-router-dom'
 const NavBar = () => {
     return (
         <div className={styles.header}>
-            <div>
-            <Link exact to="/countries" >
+            <div className={styles.containerLogo}>
+            <Link exact to="/" >
                 <img className={styles.logo} src={Logo} width="40" height="40" alt="logo"/>
             </Link>
-        </div>
+            <h1 className={styles.brand}> Países </h1>
+            </div>
             <nav> 
                 <ul className={styles.menu}>
-                    <Link  exact to="/countries" >Países</Link>
-                    <Link to="/create">Crea una actividad turística </Link> 
+                    <Link className={styles.countries} exact to="/countries" >Países</Link>
+                    <Link to="/create"> <button className={styles.create}> Crea una actividad turística </button> </Link> 
                  </ul>
             </nav>
         </div>

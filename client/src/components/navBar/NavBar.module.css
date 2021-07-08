@@ -2,7 +2,7 @@
 
 .header {
    width: 100%;
-   padding: 0.7em 0;
+   padding: 0.5em 0;
    display: flex;
    flex-direction: row;
    justify-content: space-between;
@@ -19,12 +19,43 @@
     text-decoration: none;
     margin-right: 40px;
     font-size: 18px;
+    transition: 0.5;
 }
 
-.header .menu a:hover {
+.header .menu .countries:hover {
     text-decoration: underline;
+    transition: 0.5s;
 }
 
+.containerLogo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 .logo {
-    margin-left: 1em;
+    margin-left: 1.5em;
+}
+
+.brand {
+    color: #fff;
+    font-size: 22px;
+    margin-left: 10px;
+    letter-spacing: 1px;
+}
+
+.create {
+    padding: 10px;
+    border-radius: 14px;
+    border: none;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.create:hover {
+    background-color: var(--secondary-color);
 }

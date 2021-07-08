@@ -1,8 +1,8 @@
-
+const HOST = "https://regions-data.herokuapp.com/"
 
 export function getCountries() {
     return function (dispatch) {
-        return fetch('http://localhost:3001/countries')
+        return fetch(`${HOST}countries`)
         .then(response => response.json())
         .then(json => {
             dispatch({type: "GET_COUNTRIES", data: json})
@@ -13,7 +13,7 @@ export function getCountries() {
 
 export function fillFilterCountries() {
     return function (dispatch) {
-        return fetch('http://localhost:3001/countries')
+        return fetch(`${HOST}countries`)
         .then(response => response.json())
         .then(json => {
             dispatch({type: "FILL_FILTER_COUNTRIES", data: json})
@@ -24,7 +24,7 @@ export function fillFilterCountries() {
 
 export function getCountryById(id) {
     return function (dispatch) {
-        return fetch(`http://localhost:3001/countries/${id}`)
+        return fetch(`${HOST}countries/${id}`)
         .then(response => response.json())
         .then(json => {
             dispatch({type: "GET_COUNTRY_BY_ID", data:json})
@@ -35,7 +35,7 @@ export function getCountryById(id) {
 
 export function getCountryByName(name) {
     return function (dispatch) {
-        return fetch(`http://localhost:3001/countries/search?name=${name}`)
+        return fetch(`${HOST}countries/search?name=${name}`)
         .then(response => response.json())
         .then(json => {
             console.log(json)
@@ -48,7 +48,7 @@ export function getCountryByName(name) {
 
 // HELPER FUNCTION 
 export function createActivity(data) {
-        return fetch("http://localhost:3001/activities/create", {
+        return fetch(`${HOST}activities/create`, {
             method: 'POST', 
             body: JSON.stringify(data), 
             headers: {
@@ -88,11 +88,11 @@ export function sortCountries(countries, sort) {
       dispatch({type: "ORDER_COUNTRIES", data: sortCountries})
     }
     
-  }  
+  } 
 
 export function getActivities() {
     return function(dispatch) {
-        return fetch("http://localhost:3001/activities")
+        return fetch(`${HOST}activities`)
         .then(response => response.json())
         .then(json => {
             dispatch({type: "GET_ACTIVITIES", data:json})
@@ -103,7 +103,7 @@ export function getActivities() {
 
 export function getContinents() {
     return function (dispatch) {
-        return fetch("http://localhost:3001/countries/continents")
+        return fetch(`${HOST}countries/continents`)
         .then(response => response.json())
         .then(json => {
             dispatch({type: "GET_CONTINENTS", data:json})

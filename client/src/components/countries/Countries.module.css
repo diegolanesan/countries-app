@@ -24,15 +24,15 @@
 }
 
 .flag {
-    width: 90%;
-    max-height: 90%;
     padding-top: 1rem;
+    max-height: 250px;
+    max-width: 250px;
 }
 
 div span {
     display: block;
-    font-weight: 600;
-    font-size: 20px;
+    font-weight: 700;
+    font-size: 23px;
     color: var(--green);
     margin-top: 15px;
 }
@@ -44,5 +44,5 @@ div a {
 div p {
     font-size: 16px;
     margin-top: 5px;
-    color: var(--primary-color)
+    color: var(--primary-color);
 }

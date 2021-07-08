@@ -9,7 +9,7 @@ import Pagination from '../pagination/Pagination';
 import AllCountries from '../allCountries/allCountries'
 
 
-const Countries = (props) => { 
+const Countries = (props) => {
     const dispatch = useDispatch() 
     useEffect(() => dispatch(getCountries()), [dispatch])
     useEffect(() => {dispatch(getContinents())}, [dispatch])
@@ -32,7 +32,6 @@ const Countries = (props) => {
         <div>
             <SearchBar />
             <ul className={styles.countries}>
-              
             {filterCountries.length === 0 &&
               
               <AllCountries/>
@@ -63,7 +62,7 @@ const Countries = (props) => {
                     </Link>
                     
                 </li>
- 
+
                 }
               } else {
                 
@@ -81,13 +80,11 @@ const Countries = (props) => {
             
           })}
             </ul>
-            {filterCountries.length >=10 ? <Pagination 
-            countriesPerPage={countriesPerPage} 
-            totalCountries={filterCountries.length} 
-            nextPage={nextPage}> 
-          </Pagination> : 
-          <div></div>
-          }
+            <Pagination 
+              countriesPerPage={countriesPerPage} 
+              totalCountries={filterCountries.length} 
+              nextPage={nextPage}> 
+            </Pagination>
         </div>
     )
 }

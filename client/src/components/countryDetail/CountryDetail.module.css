@@ -1,31 +1,64 @@
 @import "../../index.module.css";
 
-* {
-    box-sizing: border-box;
-}
-
 .container {
-    display:flex;
-    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    margin: 40px auto;
 }
 
-.card {
+.back {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 230px;
+    margin-top: 40px;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 14px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+
+.back:hover {
+    background-color: var(--secondary-color);
+}
+
+.country {
+    width: 50%;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: 50% 50%;
     list-style: none;
     overflow: hidden;
     box-shadow: 0px 2px 8px 0px var(--grey);
-    width: 280px;
+    width: 40%;
     border-radius: 1rem;
-    position: relative;
-    margin-bottom: 1rem;
     background: #fff;
-    margin-top: 40px;
-    margin-right: 40px;
     padding-top: 10px;
 }
 
+.activities {
+    margin-top: 20px;
+    width: 80%;
+    margin: auto;
+}
+
+.activity {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 30% 30% 30% 30%;
+}
 .flag {
-    width: 90%;
-    max-height: 90%;
+    max-width: 300px;
+    max-height: 300px;
     padding-top: 1rem;
 }
 
@@ -52,3 +85,4 @@ span {
     padding-bottom: 20px; 
     color: #000;
 } 
+
